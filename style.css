@@ -1,0 +1,164 @@
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://i.pinimg.com/736x/bb/c1/83/bbc183bf3006f4345222ec6886fa4290.jpg')
+    no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #f0f0f0;
+}
+
+/* App container with transparent background */
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  backdrop-filter: blur(10px);    /* glassmorphism blur */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+/* Input field styling */
+#task-input,
+.task-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+#task-input::placeholder {
+  color: #aaa;
+}
+
+#task-input:focus,
+.task-input:focus {
+  outline: none;
+  border: 1px solid #5e9cff;
+}
+
+/* Add Task button */
+#add-task-btn {
+  background-color: #f67d6a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+  background-color: #e73c3c;
+}
+
+/* Task list */
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+/* Individual task item */
+li {
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Task text */
+.task-text {
+  font-size: 16px;
+  cursor: pointer;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Checkbox styling */
+input[type='checkbox'] {
+  transform: scale(1.2);
+  accent-color: #4e9bff;
+}
+
+/* Hidden edit input */
+.task-input {
+  display: none;
+  width: 70%;
+}
+
+/* Buttons inside task */
+button {
+  background-color: #4e9bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3c8ce7;
+}
+
+/* Edit button color */
+.edit-btn {
+  background-color: #ffeaaa;
+  color: #000;
+}
+
+.edit-btn:hover {
+  background-color: #efc851;
+}
+
+/* Delete button color */
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
